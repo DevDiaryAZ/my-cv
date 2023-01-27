@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import {StContainer} from "../header/Header";
-import {StDivFlex} from "../nav/Nav";
 import img from '../../img/about.jpg';
 
 const StSection = styled.section`
