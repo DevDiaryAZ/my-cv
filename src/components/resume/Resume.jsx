@@ -1,11 +1,89 @@
 import {StContainer, StSection} from "../header/Header";
 import styled from 'styled-components';
 
-const StDivRow = styled.div`
+export const StDivRow = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
+`
+
+const StDivRow50 = styled.div`
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+
+  .progress-wrap {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .progress-wrap h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: black;
+    text-align: left;
+  }
+
+  .progress-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #007bff;
+    -webkit-transition: width 0.6s ease;
+    -o-transition: width 0.6s ease;
+    transition: width 0.6s ease;
+    background: #3e64ff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-size: 12px;
+    line-height: 1.2;
+    color: #000000;
+    font-weight: 600;
+    position: relative;
+    overflow: visible;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    width: 90%;
+  }
+
+  .progress {
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    display: flex;
+    height: 10px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #e6e6e6;
+    overflow: visible;
+  }
+  .progress-bar span {
+    position: absolute;
+    top: -32px;
+    right: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+  }
 `
 
 const StDivFlexCol3 = styled.div`
@@ -16,22 +94,27 @@ const StDivFlexCol3 = styled.div`
   flex: 0 0 25%;
   max-width: 25%;
 
-  nav{
+  nav {
     top: 180px;
     position: -webkit-sticky;
     position: sticky;
-    margin: 0;  }
+    margin: 0;
+  }
+
   nav li {
     font-weight: 700;
     list-style: none;
-    margin-bottom: 10px;    text-align: left;
-    
+    margin-bottom: 10px;
+    text-align: left;
+
   }
+
   nav li a {
     color: #3e64ff;
     margin-left: 20px;
     position: relative;
   }
+
   nav li a.current:after {
     position: absolute;
     top: 50%;
@@ -58,6 +141,7 @@ const StDivFlexCol3Right = styled.div`
     width: 100%;
     margin-bottom: 7em;
   }
+
   .page .heading {
     font-weight: 800;
     font-size: 30px;
@@ -65,14 +149,16 @@ const StDivFlexCol3Right = styled.div`
     color: #3e64ff;
     text-align: left;
   }
+
   .resume-wrap {
-    display: flex !important;
+    display: flex;
     width: 100%;
     margin-bottom: 30px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding-bottom: 10px;
     text-align: left;
   }
+
   .resume-wrap .icon {
     width: 50px;
     height: 50px;
@@ -81,28 +167,33 @@ const StDivFlexCol3Right = styled.div`
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     border-radius: 50%;
-    align-items: center !important;
-    justify-content: center !important;
-    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    display: flex;
   }
+
   .resume-wrap .icon span {
     color: #fff;
     font-size: 28px;
   }
+
   .resume-wrap .text {
     width: calc(100% - 50px);
-    padding-left: 1rem !important;
+    padding-left: 1rem;
   }
+
   .resume-wrap .date {
     font-weight: 700;
     font-size: 16px;
     color: rgba(0, 0, 0, 0.6);
     color: #3e64ff;
   }
+
   .resume-wrap h2 {
     font-size: 24px;
     font-weight: 700;
   }
+
   .resume-wrap .position {
     font-size: 18px;
     font-weight: 700;
@@ -110,12 +201,172 @@ const StDivFlexCol3Right = styled.div`
   }
 `
 
+const StProgressCircle = styled.div`
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
+  margin-bottom: 1.5rem;
+
+  .bg-white {
+    background-color: #fff;
+  }
+
+  .rounded-lg {
+    border-radius: 0.3rem;
+  }
+
+  .shadow {
+    -webkit-box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+  }
+
+  .p-4 {
+    padding: 1.5rem;
+  }
+
+  .font-weight-bold {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .progress {
+    display: flex;
+    font-size: 0.75rem;
+    border-radius: 0.25rem;
+    margin-right: auto;
+    margin-left: auto;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #e6e6e6;
+    overflow: visible;
+    width: 150px;
+    height: 150px;
+    background: none;
+    position: relative;
+  }
+
+  .progress > span {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+
+  .progress .progress-left {
+    left: 0;
+  }
+
+  .progress-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    transition: width 0.6s ease;
+    background: #3e64ff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-size: 12px;
+    line-height: 1.2;
+    color: #000000;
+    font-weight: 600;
+    overflow: visible;
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-width: 6px;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+  }
+
+  .progress .progress-left .progress-bar {
+    left: 100%;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-left: 0;
+    transform-origin: center left;
+    transform: rotate(144deg);
+  }
+
+  .border-primary {
+    border-color: #007bff;
+  }
+
+  .progress .progress-right {
+    right: 0;
+  }
+
+  .progress .progress-right .progress-bar {
+    left: -100%;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-right: 0;
+    transform-origin: center right;
+    transform: rotate(180deg);
+  }
+
+  .progress .progress-value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: black;
+    margin-bottom: 0.5rem;
+  }
+
+  .small {
+    font-size: 80%;
+    font-weight: 400;
+  }
+
+  sup {
+    top: -0.5em;
+  }
+
+  .border-right {
+    border-right: 1px solid #dee2e6 !important;
+  }
+
+  .col-6 {
+    margin-top: 1.5rem !important;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .h4 {
+    line-height: 1.5;
+    color: black;
+    font-weight: 400;
+    font-weight: 700 !important;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+
+  }
+
+`
+
 const StCurrentSection = styled(StSection)`
   height: 100%;
 `
 
 export const Resume = () => {
-    return  <StCurrentSection id="resume-section">
+    return <StCurrentSection id="resume-section">
         <StContainer>
             <StDivRow>
                 <StDivFlexCol3>
@@ -266,126 +517,59 @@ export const Resume = () => {
                             </div>
                         </div>
                     </div>
-                    <div id="page-3" className="page three">
+                    <div id="skills" className="page">
                         <h2 className="heading">Skills</h2>
-                        <div className="row progress-circle mb-5">
-                            <div className="col-lg-4 mb-4">
-                                <div className="bg-white rounded-lg shadow p-4">
-                                    <h2 className="h5 font-weight-bold text-center mb-4">CSS</h2>
+                        <StDivRow>
+                            <StProgressCircle className=" col-lg-4 mb-4">
+                                <div className=" bg-white rounded-lg shadow p-4">
+                                    <h2 className=" h5 font-weight-bold text-center mb-4">CSS</h2>
 
 
-                                    <div className="progress mx-auto" data-value='90'>
-						          <span className="progress-left">
-                        <span className="progress-bar border-primary"></span>
+                                    <div className=" progress mx-auto" data-value='90'>
+						          <span className=" progress-left">
+                                    <span className=" progress-bar border-primary"></span>
 						          </span>
-                                        <span className="progress-right">
-                        <span className="progress-bar border-primary"></span>
-						          </span>
-                                        <div
-                                            className="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-                                            <div className="h2 font-weight-bold">90<sup
-                                                className="small">%</sup></div>
-                                        </div>
-                                    </div>
-
-
-
-                                    <div className="row text-center mt-4">
-                                        <div className="col-6 border-right">
-                                            <div className="h4 font-weight-bold mb-0">28%</div>
-                                            <span className="small text-gray">Last week</span>
-                                        </div>
-                                        <div className="col-6">
-                                            <div className="h4 font-weight-bold mb-0">60%</div>
-                                            <span className="small text-gray">Last month</span>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div className="col-lg-4 mb-4">
-                                <div className="bg-white rounded-lg shadow p-4">
-                                    <h2 className="h5 font-weight-bold text-center mb-4">HTML</h2>
-
-
-                                    <div className="progress mx-auto" data-value='80'>
-						          <span className="progress-left">
-                        <span className="progress-bar border-primary"></span>
-						          </span>
-                                        <span className="progress-right">
-                        <span className="progress-bar border-primary"></span>
+                                        <span className=" progress-right">
+                                    <span className=" progress-bar border-primary"></span>
 						          </span>
                                         <div
-                                            className="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-                                            <div className="h2 font-weight-bold">80<sup
-                                                className="small">%</sup></div>
+                                            className=" progress-value w-100 h-100 rounded-circle d-flex
+                                             align-items-center justify-content-center">
+                                            <div className=" h2 font-weight-bold">90<sup
+                                                className=" small">%</sup></div>
                                         </div>
                                     </div>
 
-                                    <div className="row text-center mt-4">
-                                        <div className="col-6 border-right">
-                                            <div className="h4 font-weight-bold mb-0">28%</div>
-                                            <span className="small text-gray">Last week</span>
+
+                                    <StDivRow className=" row text-center mt-4">
+                                        <div className=" col-6 border-right">
+                                            <div className=" h4 font-weight-bold mb-0">28%</div>
+                                            <span className=" small text-gray">Last week</span>
                                         </div>
-                                        <div className="col-6">
-                                            <div className="h4 font-weight-bold mb-0">60%</div>
-                                            <span className="small text-gray">Last month</span>
+                                        <div className=" col-6">
+                                            <div className=" h4 font-weight-bold mb-0">60%</div>
+                                            <span className=" small text-gray">Last month</span>
                                         </div>
-                                    </div>
+                                    </StDivRow>
 
                                 </div>
-                            </div>
+                            </StProgressCircle>
 
-                            <div className="col-lg-4 mb-4">
-                                <div className="bg-white rounded-lg shadow p-4">
-                                    <h2 className="h5 font-weight-bold text-center mb-4">jQuery</h2>
-
-
-                                    <div className="progress mx-auto" data-value='75'>
-						          <span className="progress-left">
-                        <span className="progress-bar border-primary"></span>
-						          </span>
-                                        <span className="progress-right">
-                        <span className="progress-bar border-primary"></span>
-						          </span>
-                                        <div
-                                            className="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-                                            <div className="h2 font-weight-bold">75<sup
-                                                className="small">%</sup></div>
-                                        </div>
-                                    </div>
-
-
-
-                                    <div className="row text-center mt-4">
-                                        <div className="col-6 border-right">
-                                            <div className="h4 font-weight-bold mb-0">28%</div>
-                                            <span className="small text-gray">Last week</span>
-                                        </div>
-                                        <div className="col-6">
-                                            <div className="h4 font-weight-bold mb-0">60%</div>
-                                            <span className="small text-gray">Last month</span>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-md-6 animate-box">
-                                <div className="progress-wrap ftco-animate">
+                        </StDivRow>
+                        <StDivRow className="row">
+                            <StDivRow50 className=" col-md-6 animate-box">
+                                <div className=" progress-wrap ftco-animate">
                                     <h3>Photoshop</h3>
-                                    <div className="progress">
-                                        <div className="progress-bar color-1" role="progressbar"
+                                    <div className=" progress">
+                                        <div className=" progress-bar color-1"
                                              aria-valuenow="90"
-                                             aria-valuemin="0" aria-valuemax="100" >
+                                             aria-valuemin="0" aria-valuemax="100">
                                             <span>90%</span>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="col-md-6 animate-box">
+                            </StDivRow50>
+                            <StDivRow50 className="col-md-6 animate-box">
                                 <div className="progress-wrap ftco-animate">
                                     <h3>jQuery</h3>
                                     <div className="progress">
@@ -396,56 +580,32 @@ export const Resume = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="col-md-6 animate-box">
+                            </StDivRow50>
+                            <StDivRow50 className="col-md-6 animate-box">
                                 <div className="progress-wrap ftco-animate">
                                     <h3>HTML5</h3>
                                     <div className="progress">
                                         <div className="progress-bar color-3" role="progressbar"
                                              aria-valuenow="95"
-                                             aria-valuemin="0" aria-valuemax="100" >
+                                             aria-valuemin="0" aria-valuemax="100">
                                             <span>95%</span>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="col-md-6 animate-box">
+                            </StDivRow50>
+                            <StDivRow50 className="col-md-6 animate-box">
                                 <div className="progress-wrap ftco-animate">
                                     <h3>CSS3</h3>
                                     <div className="progress">
                                         <div className="progress-bar color-4" role="progressbar"
                                              aria-valuenow="90"
-                                             aria-valuemin="0" aria-valuemax="100" >
+                                             aria-valuemin="0" aria-valuemax="100">
                                             <span>90%</span>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="col-md-6 animate-box">
-                                <div className="progress-wrap ftco-animate">
-                                    <h3>WordPress</h3>
-                                    <div className="progress">
-                                        <div className="progress-bar color-5" role="progressbar"
-                                             aria-valuenow="70"
-                                             aria-valuemin="0" aria-valuemax="100">
-                                            <span>70%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-6 animate-box">
-                                <div className="progress-wrap ftco-animate">
-                                    <h3>SEO</h3>
-                                    <div className="progress">
-                                        <div className="progress-bar color-6" role="progressbar"
-                                             aria-valuenow="80"
-                                             aria-valuemin="0" aria-valuemax="100">
-                                            <span>80%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            </StDivRow50>
+                        </StDivRow>
                     </div>
                     <div id="page-4" className="page four">
                         <h2 className="heading">Awards</h2>

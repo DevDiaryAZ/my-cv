@@ -1,5 +1,15 @@
+import styled from 'styled-components';
+import {StSection} from "../header/Header";
+
+const StCurrentSection = styled(StSection)`
+  font-size: 16px;
+  background: #000000;
+  padding: 7em 0;
+  z-index: 0;
+`
+
 export const Footer = () => {
-    return             <footer className="ftco-footer ftco-section">
+    return <StCurrentSection className="footer">
         <div className="container">
             <div className="row mb-5">
                 <div className="col-md">
@@ -73,11 +83,11 @@ export const Footer = () => {
                     <p>
                         Copyright &copy;
                         All rights reserved | This template is made with <i
-                            className="icon-heart color-danger" aria-hidden="true"></i> by <a
-                            href="https://colorlib.com" target="_blank">Colorlib</a>
+                        className="icon-heart color-danger" aria-hidden="true"></i> by <a
+                        href="https://colorlib.com" target="_blank">Colorlib</a>
                     </p>
                 </div>
             </div>
         </div>
-    </footer>
+    </StCurrentSection>
 }

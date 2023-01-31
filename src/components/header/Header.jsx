@@ -14,6 +14,9 @@ export const StSection = styled.section`
   width: 100%;
   height: 100%;
   position: relative;
+`
+
+const StCurrentSection = styled(StSection)`
   background-size: cover;
   background-repeat: no-repeat;
   height: 800px;
@@ -140,7 +143,7 @@ const StMouseBtnContainer = styled.div`
 `
 
 export const Header = () => {
-    return <StSection>
+    return <StCurrentSection>
         <div className="overlay"></div>
         <StContainer>
             <StCenterContainer>
@@ -160,5 +163,5 @@ export const Header = () => {
                 <div className="mouse-wheel"><span className="ion-ios-arrow-round-down"></span></div>
             </a>
         </StMouseBtnContainer>
-    </StSection>
+    </StCurrentSection>
 }

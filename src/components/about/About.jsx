@@ -7,20 +7,20 @@ const StSection = styled.section`
   margin-bottom: 200px;
 `
 
-const StContainerFlex = styled.div`
+export const StContainerFlex = styled.div`
   display: flex;
   margin-right: 0;
   margin-left: 0;
   flex-wrap: wrap;
 `
 
-const StDivFlexCol2 = styled.div`
+export const StDivFlexCol2 = styled.div`
   display: flex;
   flex: 0 0 50%;
   max-width: 50%;
 `
 
-const StImageAboutContainer = styled.div`
+export const StImageAboutContainer = styled.div`
   display: flex;
   align-items: stretch;
   width: 100%;

@@ -8,7 +8,6 @@ import {Partners} from "./components/partners/Partners";
 import {Resume} from "./components/resume/Resume";
 import {Services} from "./components/services/Services";
 import {Projects} from "./components/projects/Projects";
-import {Counter} from "./components/counter/Counter";
 import {Freelancing} from "./components/freelancing/Freelancing";
 import {Contact} from "./components/contact/Contact";
 import {Footer} from "./components/footer/Footer";
@@ -32,11 +31,9 @@ function App() {
 
             <Resume/>
 
-            <Services/>
+            {/*<Services/>*/}
 
             <Projects/>
-
-            <Counter/>
 
             <Freelancing/>
 
